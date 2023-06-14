@@ -20,11 +20,25 @@ $('#' + randomChosenColour).animate(
   }
 );
 
-//===========random Number(Dome)===============
+//================Play Sound=================
+
+new Audio("sounds/"+randomChosenColour+".mp3").play();
+
+
+//============================
+
+$(".btn").click(function (e) { 
+  handler();
+});
+
+function handler() {
+  var userChosenColour; 
+}
+
+
+//===========random Number(Done)===============
 
 function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
   return randomNumber;
 }
-
-console.log(gamePattern);
